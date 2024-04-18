@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+
+<html>
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CTS Bank</title>
+    <link rel="stylesheet" href="bank_proj_css.css">
+</head>
+
+<body>
+
+    <ul class="navigation">
+        <li><a href="bank_main.html">Personal</a></li> <!---->
+        <li><a href="about_us.html">About Us</a></li>
+        <li><a href="contact_us.html">Contact Us</a></li>
+        <li><a href="help.html">Help</a></li>
+    </ul>
+
+<br>
+<br>
+<br>
+    <hr class="line">
+    <img src="bank.png" class="logo">
+    <div class="login-form">
+        <form>
+
+            <div class="form-group">
+                <label for="username"></label>
+                <br>
+                <input type="text" id="username" name="username" placeholder="Username" required>
+            </div>
+            <div class="form-group">
+                <label for="password"></label>
+                <br>
+                <input type="password" id="password" name="password" placeholder="Password" required>
+            </div>
+            <button class ="login-button"type="submit">Login</button>
+            <p class="forgot"><a href="forgot.html">Forgot ID/Password?</a></p>
+
+        </form>
+    </div>
+
+        <hr class="line">
+
+        <img src="bank talk.png" class="main-img">
+
+    <div class="middle-content">
+
+        <script>
+            function validateForm() {
+                var username = document.getElementById("username").value;
+                var password = document.getElementById("password").value;
+                
+                // Check if username and password meet your requirements
+                if (username === "your_username" && password === "your_password") {
+                    // Redirect to the desired page
+                    window.location.href = "user-home.html"; // Change "success.html" to your desired page
+                    return false; // Prevent the form from submitting
+                } else {
+                    // Display an error message or handle invalid login
+                    alert("Invalid username or password");
+                    return false; // Prevent the form from submitting
+                }
+            }
+        </script>
+        
+    </div>
+    
+            
+
+</body>
+
+</html>

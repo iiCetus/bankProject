@@ -1,0 +1,212 @@
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+
+}
+
+.navigation {
+    list-style-type: none; /* Remove bullet points */
+    padding: 0;
+    text-align: center; /* Center the navigation */
+    position: absolute; /* Set position to absolute */
+    top: -5px; /* Adjust distance from the top */
+    left: 50%; /* Align the center of the navigation with the center of the page */
+    transform: translateX(-50%); /* Center the navigation horizontally */
+    font-size: 25px; /* Increase font size */
+}
+
+.navigation li {
+    display: inline; /* Display list items horizontally */
+    margin-right: 30px; /* Adjust spacing between links */
+}
+
+.navigation li:last-child {
+    margin-right: 0; /* Remove margin from the last item */
+}
+
+.navigation li a {
+    text-decoration: none; /* Remove underline */
+    color: #333; /* Adjust link color */
+}
+
+.navigation li a:hover {
+    text-decoration: underline; /* Add underline on hover */
+}
+
+
+img.logo {
+    width: 200px; /* Set the width to 200 pixels */
+    height: auto; /* Maintain the aspect ratio */
+    margin-left: 325px;
+    
+}
+
+img {
+    display: block; /* treat image as block element */
+}
+
+.login-form {
+    margin-left: 300px; 
+    margin-right: 0; 
+}
+
+.form-group input[type="text"],
+.form-group input[type="password"] {
+    width: 15%; 
+    padding: 10px; 
+    font-size: 16px; 
+    border: 1px solid #ccc; /* grey border */
+    border-radius: 5px; /* add rounded corners */
+    box-sizing: border-box; 
+    margin-bottom: 10px; 
+}
+
+.login-button {
+    display: block;
+    width: 13%;
+    padding: 10px;
+    margin-top: 20px; /* Add space between input fields and button */
+    border: none;
+    background-color: #ff0000; /* Set button background color */
+    color: #fff; /* Set button text color */
+    cursor: pointer;
+}
+
+.login-button:hover {
+    background-color: #2f00ff; /* Change background color on hover */
+}
+
+.forgot a{
+    text-decoration: none;
+    font-size: 15px;
+    color:#000000
+}
+
+.forgot:hover{
+    text-decoration: underline;
+}
+
+.main-img {
+    display: block; /* Treat image as a block element */
+    margin-left: 650px; /* Center the image horizontally */
+    margin-right: auto;
+    margin-top: -443px; /* Set a specific distance from the top */
+    opacity: 100%;
+    transform: scaleX(1.1) scaleY(1.117); 
+}
+
+.line {
+    border: none; /* Remove default border */
+    border-top: 1px solid #6d6d6d; /* Add a solid black border on top */
+    margin: 20px 0; /* Add margin to create space */
+    width: 100%; /* Make the line fill the width of the page */
+    margin-left: 0; /* Stretch the line to the left side */
+}
+
+.logo-help{
+    position: absolute;
+    top: 5px; /* Adjust the distance from the top */
+    left: 10px; /* Adjust the distance from the left */
+    display: inline-block;
+    width: 4%;
+    height: 8%;
+}
+
+.line-help{
+    position: absolute;
+    border: none; 
+    border-top: 1px solid #242424;
+    width: 100%; /* Make the line fill the width of the page */
+    top: 70px; /* Adjust the distance from the top */
+    
+}
+
+.head-text-help{
+    position: absolute;
+    font-size: 35px;
+    margin-left: 100px;
+    top: -15px
+}
+
+.box-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Create 3 equal-width columns */
+    grid-gap: 0px; /* Add gap between grid items */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 100vh; /* Set the container height to the full viewport height */
+    border-radius: 5px;
+    margin-left: 50px;    
+}
+  
+.box {
+    width: 450px; /* Set the width of each box */
+    height: 280px; /* Set the height of each box */
+    border: 1px solid #ccc; /* Add border for visualization */
+    border-radius: 5px;
+    background-color: #fff;
+}
+  
+  /* Add additional styling for box content */
+.box h3 {
+    margin-top: 20px; /* Adjust margin for the heading */
+}
+  
+.box p {
+    margin-bottom: 20px; /* Adjust margin for the paragraph */
+}
+  
+.bg-color{
+    position: absolute;
+    top: 78px;
+    width: 100%;
+    background-color: #e7e7e7;
+    opacity: 70%;
+}
+
+.box-subtext{
+    display: inline-block;
+    margin-left: 40px;
+    margin-top: -20px;
+}
+
+.box-subtext a{
+    text-decoration: none;
+
+}
+
+.box-subtext a:hover{
+    text-decoration: underline;
+}
+
+.box-title{
+    text-align: center;
+    font-size: 20px;
+}
+
+.box-img-shield{
+    transform: scale(.15) translate(350px, -4050px);
+}
+
+.box-img-cog{
+    transform: scale(.3) translate(300px, -1390px);
+}
+
+.box-img-phone{
+    transform: scale(.3) translate(230px, -1390px);
+}
+
+.box-img-money{
+    transform: scale(.14) translate(350px, -5150px);
+}
+
+.box-img-card{
+    transform: scale(.5) translate(220px, -400px);
+}
+
+.box-img-thinking{
+    transform: scale(.25) translate(550px, -1650px);
+}
