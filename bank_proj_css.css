@@ -89,14 +89,34 @@ img {
     text-decoration: underline;
 }
 
+.register a{
+    text-decoration: none;
+    font-size: 15px;
+    color: #000000;
+}
+
+.register:hover{
+    text-decoration: underline;
+}
+
 .main-img {
     display: block; /* Treat image as a block element */
     margin-left: 650px; /* Center the image horizontally */
     margin-right: auto;
-    margin-top: -443px; /* Set a specific distance from the top */
+    margin-top: -460px; /* Set a specific distance from the top */
     opacity: 100%;
-    transform: scaleX(1.1) scaleY(1.117); 
+    transform: scaleX(1.1) scaleY(1.21); 
 }
+
+.right-content {
+    position: absolute; /* Position the content absolutely */
+    right: 200px;
+    top: 100px;
+    width: 300px; /* Set the width of the content */
+    padding: 20px; /* Add padding */
+
+}
+
 
 .line {
     border: none; /* Remove default border */
@@ -209,4 +229,32 @@ img {
 
 .box-img-thinking{
     transform: scale(.25) translate(550px, -1650px);
+}
+
+.carousel-container {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: #f2f2f2; /* Background color for the carousel */
+    padding: 20px 0; /* Add padding */
+    box-sizing: border-box;
+    overflow: hidden; /* Hide overflow */
+}
+
+.carousel-inner {
+    display: flex; /* Display carousel slides in a row */
+    overflow-x: auto; /* Enable horizontal scrolling */
+    scroll-snap-type: x mandatory; /* Snap to each slide */
+    -webkit-overflow-scrolling: touch; /* Enable smooth scrolling on iOS */
+}
+
+.carousel-slide {
+    flex: 0 0 auto; /* Prevent slides from growing */
+    width: 100%; /* Set slide width */
+    scroll-snap-align: start; /* Align slides to the start */
+}
+
+.carousel-slide img {
+    width: 100%; /* Make images fill the slide container */
+    height: auto; /* Maintain aspect ratio */
 }

@@ -1,31 +1,22 @@
 <!DOCTYPE html>
-
 <html>
-    
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CTS Bank</title>
     <link rel="stylesheet" href="bank_proj_css.css">
 </head>
-
 <body>
-
     <ul class="navigation">
-        <li><a href="bank_main.html">Personal</a></li> <!---->
+        <li><a href="index.html">Personal</a></li>
         <li><a href="about_us.html">About Us</a></li>
-        <li><a href="contact_us.html">Contact Us</a></li>
         <li><a href="help.html">Help</a></li>
     </ul>
-
-<br>
-<br>
-<br>
+    <br><br><br>
     <hr class="line">
     <img src="bank.png" class="logo">
     <div class="login-form">
-        <form>
-
+        <form onsubmit="return validateForm()"> <!-- Adding onsubmit attribute -->
             <div class="form-group">
                 <label for="username"></label>
                 <br>
@@ -36,40 +27,105 @@
                 <br>
                 <input type="password" id="password" name="password" placeholder="Password" required>
             </div>
-            <button class ="login-button"type="submit">Login</button>
+            <button class="login-button" type="submit">Login</button>
             <p class="forgot"><a href="forgot.html">Forgot ID/Password?</a></p>
-
+            <p class="register"><a href="register.html">Register</a></p>
         </form>
     </div>
-
-        <hr class="line">
-
-        <img src="bank talk.png" class="main-img">
-
-    <div class="middle-content">
-
-        <script>
-            function validateForm() {
-                var username = document.getElementById("username").value;
-                var password = document.getElementById("password").value;
-                
-                // Check if username and password meet your requirements
-                if (username === "your_username" && password === "your_password") {
-                    // Redirect to the desired page
-                    window.location.href = "user-home.html"; // Change "success.html" to your desired page
-                    return false; // Prevent the form from submitting
-                } else {
-                    // Display an error message or handle invalid login
-                    alert("Invalid username or password");
-                    return false; // Prevent the form from submitting
-                }
-            }
-        </script>
-        
+    <hr class="line">
+    <img src="bank talk.png" class="main-img">
+    <div class="right-content">
+        <h1>Grow your money with us!</h1> <!-- Fixed the closing tag -->
+        <p>-Call our number at 1-800-xxx-xxxx to learn more about how you can save and grow your money with us!</p>
+        <p>-Schedule an appointment and our representative and sit down with them and learn about more opportunities</p>
+        <p>-Send an email and we'll get back to you ASAP within 1 day, any day of the week</p>
+        <p>-Pick us and start earning</p>
     </div>
     
+    
+    <script>
+        // Object containing valid username-password pairs
+        var validCredentials = {
+            "edward": "bankproject",
+            "ramsha": "bankproject",
+            "joseph": "bankproject"
+            // Add more combinations as needed
+        };
+
+        function validateForm() {
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
             
+            // Check if the entered username-password pair exists in the validCredentials object
+            if (validCredentials.hasOwnProperty(username) && validCredentials[username] === password) {
+                // Redirect to the desired page for this specific user
+                window.location.href = "ed login.html";
+                return false; // Prevent the form from submitting
+            } else {
+                // Display an error message or handle invalid login
+                alert("Invalid username or password");
+                return false; // Prevent the form from submitting
+            }
+        }
+        </script>
 
+        <div class="carousel-container"> <!-- This is the carousel container -->
+            <div class="carousel-inner">
+                <!-- Images will be added dynamically here -->
+            </div>
+            <a class="prev" onclick="moveSlide(-1)">&#10094;</a>
+            <a class="next" onclick="moveSlide(1)">&#10095;</a>
+        </div>
+
+        <script>
+        // Current slide index
+        var currentSlide = 0;
+
+        // Get the carousel container
+        var carouselContainer = document.querySelector('.carousel-inner');
+
+        // Array of image filenames
+        var imageFilenames = ['carousel1.png', 'carousel2.png', 'carousel3.png'];
+
+        // Function to initialize the carousel
+        function initCarousel() {
+            // Create carousel slides
+            for (var i = 0; i < imageFilenames.length; i++) {
+                var slide = document.createElement('div');
+                slide.classList.add('carousel-slide');
+                slide.style.backgroundImage = 'url(' + imageFilenames[i] + ')';
+                carouselContainer.appendChild(slide);
+            }
+            showSlide(currentSlide); // Show the initial slide
+        }
+
+        // Function to show a specific slide
+        function showSlide(index) {
+            var slides = document.querySelectorAll('.carousel-slide');
+            if (index >= slides.length) {
+                currentSlide = 0;
+            } else if (index < 0) {
+                currentSlide = slides.length - 1;
+            } else {
+                currentSlide = index;
+            }
+            // Hide all slides
+            for (var i = 0; i < slides.length; i++) {
+                slides[i].style.display = 'none';
+            }
+            // Show the current slide
+            slides[currentSlide].style.display = 'block';
+        }
+
+        // Function to move to the next or previous slide
+        function moveSlide(n) {
+            showSlide(currentSlide += n);
+        }
+
+        // Initialize the carousel when the page loads
+        window.onload = function() {
+            initCarousel();
+        };
+    </script>
 </body>
-
 </html>

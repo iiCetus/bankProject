@@ -1,0 +1,25 @@
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        .welcome {
+            margin-top: 50px;
+            font-size: 24px;
+        }
+        .balance {
+            margin-top: 20px;
+            font-size: 20px;
+        }
+        .transactions {
+            margin-top: 50px;
+            width: 80%;
+            margin: 0 auto;
+        }
+        .transactions th,
+        .transactions td {
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+        .transactions th {
+            background-color: #f2f2f2;
+        }
